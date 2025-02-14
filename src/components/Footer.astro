@@ -1,14 +1,21 @@
 ---
+import Social from './Social.astro';
 const platform = "github";
 const username = "Pickle58";
 const profileUrl = `https://www.${platform}.com/${username}`;
 ---
 
+<style>
+  footer a {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
 <footer>
   <p>
-    Learn more about my projects on 
-    <a href={profileUrl} target="_blank" rel="noopener noreferrer">
-      {platform}
-    </a>!
+    Learn more about my projects on
   </p>
+  <Social platform="github" username="Pickle58" />
 </footer>
