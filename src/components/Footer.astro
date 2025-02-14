@@ -1,8 +1,14 @@
 ---
 const platform = "github";
-const username = "withastro";
+const username = "Pickle58";
+const profileUrl = `https://www.${platform}.com/${username}`;
 ---
 
 <footer>
-  <p>Learn more about my projects on <a href={`https://www.${platform}.com/${username}`}>{platform}</a>!</p>
+  <p>
+    Learn more about my projects on 
+    <a href={profileUrl} target="_blank" rel="noopener noreferrer">
+      {platform}
+    </a>!
+  </p>
 </footer>
