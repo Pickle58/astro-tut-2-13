@@ -1,21 +1,15 @@
 ---
-import Social from './Social.astro';
+import Social from './Social.astro'; // ✅ Ensure Social is imported
+
 const platform = "github";
 const username = "Pickle58";
-const profileUrl = `https://www.${platform}.com/${username}`;
 ---
 
-<style>
-  footer a {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-</style>
-
-<footer>
-  <p>
+<footer class="mt-8 text-center">
+  <p class="text-gray-700 dark:text-gray-300 mb-4">
     Learn more about my projects on
   </p>
-  <Social platform="github" username="Pickle58" />
+  <div class="flex justify-center mt-2">
+    <Social platform={platform} username={username} />
+  </div>
 </footer>

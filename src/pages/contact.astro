@@ -1,6 +1,9 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";  
 import ContactForm from "../components/ContactForm.jsx";
+const pageTitle = "Contact Me";
 ---
 
-<h1 class="text-center text-3xl font-bold mt-8">Get in Touch</h1>
+<BaseLayout pageTitle={pageTitle}>
 <ContactForm client:load />
+</BaseLayout>

@@ -1,19 +1,25 @@
 ---
 const { platform, username } = Astro.props;
+const icons = {
+  github: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+};
+
+const platformUrl = `https://www.${platform}.com/${username}`;
+const iconSrc = icons[platform] || ""; // Default to empty if no icon found
 ---
+
 <a 
-  href={`https://www.${platform}.com/${username}`} 
+  href={platformUrl} 
   target="_blank" 
   rel="noopener noreferrer"
+  class="flex items-center gap-2 px-4 py-2 bg-purple-700 text-white rounded hover:bg-purple-800 transition dark:bg-purple-600 dark:hover:bg-purple-500"
 >
-  {platform}
+  {iconSrc && (
+    <img 
+      src={iconSrc} 
+      alt={`${platform} icon`} 
+      class="w-4 h-4 md:w-[1rem] md:h-[1rem] opacity-90 dark:brightness-200 dark:drop-shadow-[0_0_2px_white]"
+    />
+  )}
+  <span class="text-sm"> {platform} </span>
 </a>
-
-<style>
-  a {
-    padding: 0.5rem 1rem;
-    color: white;
-    background-color: #4c1d95;
-    text-decoration: none;
-  }
-</style>
