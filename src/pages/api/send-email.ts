@@ -10,7 +10,7 @@ export async function POST({ request }) { // Change 'post' to 'POST'
 
     await resend.emails.send({
       from: 'james.pilkington@pilkington.info', // Fixed typo in "pilkington"
-      to: 'delivered@resend.dev',
+      to: 'jpilkington332@gmail.com',
       subject: 'New Contact Message',
       text: `From: ${email}\n\nMessage:\n${message}`
     });
