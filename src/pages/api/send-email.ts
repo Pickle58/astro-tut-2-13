@@ -10,7 +10,7 @@ export async function POST({ request }) {
 
     await resend.emails.send({
       from: 'james.pilkington@pilkington.info',
-      to: 'james.pilkingon@pilkington.info',
+      to: 'jpilkington332@gmail.com',
       subject: 'New Contact Message',
       text: `From: ${email}\n\nMessage:\n${message}`, // Plain text version
       html: `<p><strong>From:</strong> ${email}</p><p><strong>Message:</strong></p><p>${message.replace(/\n/g, "<br>")}</p>` // HTML version
