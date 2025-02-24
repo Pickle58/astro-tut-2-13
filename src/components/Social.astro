@@ -18,8 +18,9 @@ const iconSrc = icons[platform] || ""; // Default to empty if no icon found
     <img 
       src={iconSrc} 
       alt={`${platform} icon`} 
-      class="w-[0.15em] h-[0.15em] md:w-[1rem] md:h-[1rem] opacity-90 dark:brightness-200 dark:drop-shadow-[0_0_2px_white]"
+      class="w-4 h-4 max-w-[1rem] max-h-[1rem] opacity-90 dark:brightness-200 dark:drop-shadow-[0_0_2px_white]"
+      style="width: 1.5rem; height: 1.5rem;"
     />
   )}
-  <span class="text-sm"> {platform} </span>
+  <span class="text-sm">{platform}</span>
 </a>
